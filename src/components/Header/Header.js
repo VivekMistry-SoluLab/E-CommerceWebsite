@@ -38,7 +38,7 @@ const Header = () => {
                 <div className="heading-font">Help & Settings</div>
                 <ListItem button >Your Account</ListItem>
                 <ListItem button >Customer Service</ListItem>
-                <ListItem button >Sign-in</ListItem>
+                <ListItem button ><NavLink exact to="/sign-in" style={{ textDecoration: 'none', color:'inherit' }}>Sign-in</NavLink></ListItem>
                 <Divider/>
             </List>
         </div>
@@ -60,12 +60,12 @@ const Header = () => {
             {listItems}
           </Drawer>
           
-        <IconButton style={{color:'lavenderblush', fontSize:'17px'}} >Laptop & Computers</IconButton>
-        <IconButton style={{color:'lavenderblush', fontSize:'17px'}} >Mobile & Accesories</IconButton>
-        <IconButton style={{color:'lavenderblush', fontSize:'17px'}} >Electronics </IconButton>
-        <IconButton style={{color:'lavenderblush', fontSize:'17px'}} >Home & Kitchen Appliances</IconButton>
-        <IconButton style={{color:'lavenderblush', fontSize:'17px'}} >Fashion</IconButton>
-        <IconButton style={{color:'lavenderblush', fontSize:'17px'}} >Today's Deal</IconButton>
+        <IconButton style={{color:'lavenderblush', fontSize:'17px'}} onClick={() => alert('Laptop & Computers')}>Laptop & Computers</IconButton>
+        <IconButton style={{color:'lavenderblush', fontSize:'17px'}} onClick={() => alert('Mobile & Accesories')}>Mobile & Accesories</IconButton>
+        <IconButton style={{color:'lavenderblush', fontSize:'17px'}} onClick={() => alert('Electronics')}>Electronics </IconButton>
+        <IconButton style={{color:'lavenderblush', fontSize:'17px'}} onClick={() => alert('Home & Kitchen Appliances')}>Home & Kitchen Appliances</IconButton>
+        <IconButton style={{color:'lavenderblush', fontSize:'17px'}} onClick={() => alert('Fashion')}>Fashion</IconButton>
+        <IconButton style={{color:'lavenderblush', fontSize:'17px'}} onClick={() => alert('Todays Deal')}>Today's Deal</IconButton>
           
         </div>
     );
