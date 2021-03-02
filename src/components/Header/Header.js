@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Divider, IconButton, List, ListItem, Typography, Drawer } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import { NavLink } from 'react-router-dom';
 
 import './Header.css';
 
@@ -15,10 +16,12 @@ const Header = () => {
     const listItems = (
         <div className="list">
             <nav className="drawer-nav">
+            <NavLink exact to="/sign-in" style={{ textDecoration: 'none', color:'inherit' }}>
                 <IconButton>
                     <AccountCircleIcon style={{color: 'white'}} size={35}/> 
                     <div className="nav-head-font">Hello, Sign-In</div>
                 </IconButton>
+            </NavLink>
             </nav>
             <List className="list-items" >
                 <div className="heading-font">  Trending</div>
@@ -43,8 +46,8 @@ const Header = () => {
     return(
         <div className="header">
         
-            <IconButton className="header-items" style={{color:'white'}} >
-                <MenuIcon onClick={handleDrawerToggle} /><Typography >App</Typography>
+            <IconButton className="header-items" style={{color:'white'}} onClick={handleDrawerToggle} >
+                <MenuIcon  /><Typography >App</Typography>
             </IconButton>
             <Drawer
             variant="temporary"
