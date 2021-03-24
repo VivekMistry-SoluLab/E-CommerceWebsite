@@ -1,0 +1,27 @@
+/* .cart{
+    display: flex;
+    justify-content: center;
+
+} */
+
+
+.cart-item{
+    position: relative;
+    margin:30px;
+    min-width: 1100px;
+    width: 1200px;
+    background-color: rgb(248, 242, 245);
+    border-radius: 23px;
+    padding: 30px;
+}
+
+.item-image{
+    max-height: 200px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.item-details{
+    margin:30px;
+}
+
