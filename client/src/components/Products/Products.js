@@ -14,7 +14,7 @@ import Spinner from '../Spinner/Spinner';
 const Products = (props) => {
     useEffect(() => {
       props.fetchProducts();
-    }, [props.fetchProducts]);
+    },[]);
 
     const[searchInput, setSearchInput] = useState("");
 
