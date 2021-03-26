@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import rootReducer from './reducers';
+import rootReducer from './reducers/indexReducer';
 import createSagaMiddleware from "redux-saga";
-import { watchProduct, watchCart } from './sagas/index';
+import { watchProduct, watchCart } from './sagas/indexSaga';
 
 const cartItemsFromStorage = localStorage.getItem('cartItems')
   ? JSON.parse(localStorage.getItem('cartItems'))

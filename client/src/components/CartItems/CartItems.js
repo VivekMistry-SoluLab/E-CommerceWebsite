@@ -81,7 +81,6 @@ CartItem.propTypes = {
     addToCart: PropTypes.func.isRequired,
     removeFromCart: PropTypes.func.isRequired,
     cart: PropTypes.object.isRequired,
-    cartItems: PropTypes.object.isRequired
   };
 
   const mapStateToProps = state => ({

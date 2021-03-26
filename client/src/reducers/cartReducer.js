@@ -15,6 +15,9 @@ const initialState = {
     switch (type) {
 
         case ADD_ITEM_TO_CART:
+          return{
+            ...state
+          }
         case ADD_ITEM_TO_CART_SUCCESS:
         const existItem = state.cartItems.find((x) => x.product === payload.product)
 
