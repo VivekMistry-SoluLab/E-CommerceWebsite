@@ -1,8 +1,8 @@
 import { takeEvery } from "redux-saga/effects";
 
-import { FETCH_PRODUCTS, ADD_PRODUCT, DELETE_PRODUCT, ADD_ITEM_TO_CART } from '../actions/actionTypes';
+import { FETCH_PRODUCTS, ADD_PRODUCT, DELETE_PRODUCT, ADD_ITEM_TO_CART, REMOVE_FROM_CART } from '../actions/actionTypes';
 import { fetchProductsSaga, addProductSaga, deleteProductSaga } from './product';
-// import { addToCartSaga } from './cart'
+import { addToCartSaga, removeFromCartSaga } from './cart'
 
 export function* watchProduct() {
     yield takeEvery(FETCH_PRODUCTS, fetchProductsSaga)
@@ -10,6 +10,7 @@ export function* watchProduct() {
     yield takeEvery(DELETE_PRODUCT, deleteProductSaga)
 }
 
-// export function* watchCart() {
-//     yield takeEvery(ADD_ITEM_TO_CART, addToCartSaga)
-// }
+export function* watchCart() {
+    yield takeEvery(ADD_ITEM_TO_CART, addToCartSaga)
+    yield takeEvery(REMOVE_FROM_CART, removeFromCartSaga)
+}

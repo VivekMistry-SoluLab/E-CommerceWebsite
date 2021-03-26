@@ -1,5 +1,12 @@
-import { FETCH_PRODUCTS, PRODUCT_ERROR, ADD_PRODUCT, DELETE_PRODUCT, FETCH_PRODUCTS_SUCCESS, ADD_PRODUCT_SUCCESS, DELETE_PRODUCT_SUCCESS } from './actionTypes';
-import axios from 'axios';
+import { 
+  FETCH_PRODUCTS, 
+  ADD_PRODUCT, 
+  DELETE_PRODUCT, 
+  FETCH_PRODUCTS_SUCCESS, 
+  ADD_PRODUCT_SUCCESS, 
+  DELETE_PRODUCT_SUCCESS
+ } from './actionTypes';
+
 
 
 export const fetchProducts = () => {

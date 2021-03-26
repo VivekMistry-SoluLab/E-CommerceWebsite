@@ -1,30 +1,35 @@
-import { ADD_ITEM_TO_CART, REMOVE_FROM_CART } from './actionTypes';
+import { 
+  ADD_ITEM_TO_CART, 
+  REMOVE_FROM_CART, 
+  ADD_ITEM_TO_CART_SUCCESS, 
+  REMOVE_FROM_CART_SUCCESS
+ } from './actionTypes';
 
-import axios from 'axios';
 
-export const addToCart = (id, qty) => async (dispatch, getState) => {
-    const  { data } = await axios.get(`/api/products/${id}`)
-    
-    dispatch({
+export const addToCart = (id, qty) => {
+    return{
       type: ADD_ITEM_TO_CART,
-      payload: {
-        product: data._id,
-        name: data.name,
-        image: data.image,
-        price: data.price,
-        qty: qty
-      },
-    })
-  
-    localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
+      id,
+      qty
+    }
+  }
+  export const addToCartSuccess = (cartData) => {
+    return{
+      type: ADD_ITEM_TO_CART_SUCCESS,
+      payload: cartData,
+    }
   }
   
-  export const removeFromCart = (id) => (dispatch, getState) => {
-      
-    dispatch({
+  export const removeFromCart = (id) => {
+      return{
       type: REMOVE_FROM_CART,
-      payload: id,
-    })
-  
-    localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
+       id,
+      }
+  }
+
+  export const removeFromCartSuccess = (dataId) => {
+    return{
+      type:REMOVE_FROM_CART_SUCCESS,
+      payload: dataId
+    }
   }

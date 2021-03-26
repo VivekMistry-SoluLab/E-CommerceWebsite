@@ -3,6 +3,7 @@ import { put } from "redux-saga/effects";
 import { fetchProductsSuccess, addProductSuccess, deleteProductSuccess } from '../actions/productActions';
 import axios from 'axios';
 
+
 export function* fetchProductsSaga(action) {
     try{
         const res = yield axios.get("/api/products");
@@ -45,3 +46,5 @@ export function* deleteProductSaga(actionData) {
        yield alert(err);
     }
 }
+
+
