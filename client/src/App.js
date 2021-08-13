@@ -11,6 +11,7 @@ import WelcomePage from './container/Home/WelcomePage';
 
 
 function App() {
+  console.log("hello this. is app");
   return (
     <>
     <div className="App">
